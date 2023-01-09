@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import Navbar from './header/navbar';
+import Footer from '../footer/footer';
+import Navbar from '../header/navbar';
 
-export default function Container(props: { children: any; }) {
+export default function MainLayout(props: { children: any; }) {
     const [mounted, setMounted] = useState(false);
 
     // After mounting, we have access to the theme
@@ -19,6 +20,9 @@ export default function Container(props: { children: any; }) {
                 </div>
                 <div>
                     {children}
+                </div>
+                <div>
+                    <Footer />
                 </div>
             </main>
         </div>

@@ -7,5 +7,98 @@ html {
 }
 
 body {
-    @apply bg-white dark:bg-gray-900 text-white dark:text-gray-900 transition duration-200
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition duration-500
+}
+
+.navbar-transition {
+    transition: background-color 500ms, box-shadoW 500ms, padding 500ms;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.link-underline {
+    @apply mx-2;
+    background: linear-gradient(#ff2f2f 0 0) 0 100% /var(--d, 0) 2px no-repeat;
+    padding-bottom: 2px;
+    transition: all 150ms ease;
+    text-decoration: none !important
+}
+
+.link-underline:hover {
+    --d: 100%
+}
+
+.link-underline svg {
+    transition: transform 150ms ease-in-out;
+}
+
+.nav-item {
+    @apply dark:bg-gray-100;
+}
+
+.rotate-icon svg {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.rotate-icon {
+    @apply bg-gray-200;
+}
+
+.button-link span{
+    background: linear-gradient(currentColor 0 0) 0 100% /var(--d, 0) 2px no-repeat;
+    transition: all .2s ease;
+    text-decoration: none !important
+}
+
+.button-link:hover span{
+    color: theme('colors.primary.600') !important;
+    --d: 100%
+}
+
+.service-card{
+    transition: box-shadow 300ms, transform 300ms, background-color 300ms;
+}
+
+.service-card-icon {
+    transition: background-color 300ms;
+}
+
+.link-button{
+    @apply rounded-sm py-2 px-4 hover:bg-gray-200 font-bold;
+    transition: background-color 300ms;
+}
+
+.transition-background {
+    transition: background-color 100ms ease;
+}
+
+button {
+    transition: background 200ms ease;
+}
+
+.button-layout {
+    @apply rounded-sm font-medium backdrop-blur-lg px-3 py-2;
+}
+
+.button-layout svg {
+    transition: transform 150ms ease-in-out;
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translate3d(-30px, 0, 0)rotateZ(30deg); }
+    to { opacity: 1; transform: none; } }
+  .fadeInLeft { animation-name: fadeInLeft; 
+}
+
+.showicon .icontoshow {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showicon:hover .icontoshow {
+    visibility: visible;
+    opacity: 100;
+    transition: visibility 0s, opacity 200ms linear;
 }
