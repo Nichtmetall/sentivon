@@ -66,7 +66,7 @@ body {
 }
 
 .link-button{
-    @apply rounded-sm py-2 px-4 hover:bg-gray-200 font-bold;
+    @apply rounded-md py-2 px-4 hover:bg-gray-200 font-bold;
     transition: background-color 300ms;
 }
 
@@ -79,7 +79,7 @@ button {
 }
 
 .button-layout {
-    @apply rounded-sm font-medium backdrop-blur-lg px-3 py-2;
+    @apply rounded-md font-medium backdrop-blur-lg px-3 py-2;
 }
 
 .button-layout svg {
@@ -102,3 +102,4 @@ button {
     opacity: 100;
     transition: visibility 0s, opacity 200ms linear;
 }
+

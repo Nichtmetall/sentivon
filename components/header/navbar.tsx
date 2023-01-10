@@ -56,7 +56,7 @@ export default function Navbar() {
           <div className="flex content-center items-center md:ml-12 space-x-5">
           </div>
           <div className='flex items-center md:ml-12 space-x-2'>
-            <MegaMenu items={Services} title='Services' hasFooter={true} footer={{ title: "Test", description: "Desc", badge: "Hello World" }} />
+            <MegaMenu items={Services} title='Services' hasFooter={true} footer={{ title: "Alle Services", description: "Sieh dir hier alle unsere Serviceleistungen an" }} />
             <SimpleButton title="Unternehmen" href="#" />
             <SimpleMenu items={Company} title="Unternehmen" />
             <SimpleButton title="Kontakt" primary={true} href="#" />
