@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 html {
+    @apply scrollbar-hide;
     scroll-behavior: smooth;
 }
 
 body {
-    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition duration-500
+    @apply bg-white text-gray-900 transition duration-500;
 }
 
 .navbar-transition {
@@ -17,23 +18,23 @@ body {
 }
 
 .link-underline {
-    @apply mx-2;
-    background: linear-gradient(#ff2f2f 0 0) 0 100% /var(--d, 0) 2px no-repeat;
+    @apply font-medium;
+    text-decoration: none;
+    background-image: linear-gradient(0deg, #000 2px,transparent 0);
+    color: #000;
+    background-repeat: no-repeat,no-repeat;
+    background-size: 0 100%,100% 100%;
     padding-bottom: 2px;
-    transition: all 150ms ease;
-    text-decoration: none !important
+    -webkit-transition: background-size .42s cubic-bezier(.165,.84,.44,1);
+    transition: background-size .42s cubic-bezier(.165,.84,.44,1);
 }
 
 .link-underline:hover {
-    --d: 100%
+    background-size:100% 100%,100% 100%
 }
 
 .link-underline svg {
     transition: transform 150ms ease-in-out;
-}
-
-.nav-item {
-    @apply dark:bg-gray-100;
 }
 
 .rotate-icon svg {
@@ -43,7 +44,7 @@ body {
 }
 
 .rotate-icon {
-    @apply bg-gray-200;
+    background-size:100% 100%,100% 100%
 }
 
 .button-link span{
@@ -66,7 +67,7 @@ body {
 }
 
 .link-button{
-    @apply rounded-md py-2 px-4 hover:bg-gray-200 font-bold;
+    @apply rounded-sm py-2 px-4 hover:bg-gray-200 font-bold;
     transition: background-color 300ms;
 }
 
@@ -79,7 +80,7 @@ button {
 }
 
 .button-layout {
-    @apply rounded-md font-medium backdrop-blur-lg px-3 py-2;
+    @apply rounded-sm font-medium backdrop-blur-lg px-3 py-2;
 }
 
 .button-layout svg {
@@ -102,4 +103,3 @@ button {
     opacity: 100;
     transition: visibility 0s, opacity 200ms linear;
 }
-

@@ -8,7 +8,7 @@ export default function SimpleButton(props: any) {
     }
     else {
         return (
-            <button className="hover:bg-gray-200 button-layout"><Link href={props.href}>{props.title}</Link></button>
+            <button className="link-underline text-base font-medium"><Link href={props.href}>{props.title}</Link></button>
         )
     }
 }

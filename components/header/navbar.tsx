@@ -4,9 +4,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import Image from 'next/image'
 import SimpleButton from '../buttons/simpleButton'
-import MegaMenu from '../buttons/megaMenu'
-import SimpleMenu from '../buttons/simpleMenu'
+import MegaMenu from '../dropdowns/megaMenu'
+import SimpleMenu from '../dropdowns/simpleMenu'
 import { Company, Services, Solutions } from '../data'
+import SlideOver from './slideOver'
 
 export const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -35,7 +36,7 @@ export default function Navbar() {
 
 
   return (
-    <Popover className={classNames(scrollPosition > 0 ? 'shadow-lg bg-white dark:bg-gray-800 py-2' : 'shadow-none bg-none py-5', 'navbar-transition sticky top-0 z-20 bg-opacity-50 dark:bg-opacity-50 backdrop-blur-md',)}>
+    <Popover className={classNames(scrollPosition > 0 ? 'shadow-lg bg-white py-2' : 'shadow-none bg-none py-5', 'navbar-transition fixed w-full top-0 z-20 bg-opacity-50 backdrop-blur-md',)}>
       <div className="mx-auto max-w-7xl flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
           <Link href="/" className="flex">
@@ -54,12 +55,12 @@ export default function Navbar() {
 
           </Popover.Group>
           <div className="flex content-center items-center md:ml-12 space-x-5">
+            <SlideOver title="Service" items={Services} />
+            <SlideOver title="Lösungen" items={Solutions} />
+            <SlideOver title="Unternehmen" items={Company} />
+            <SimpleButton title="Kontakt" href="#" />
           </div>
-          <div className='flex items-center md:ml-12 space-x-2'>
-            <MegaMenu items={Services} title='Services' hasFooter={true} footer={{ title: "Alle Services", description: "Sieh dir hier alle unsere Serviceleistungen an" }} />
-            <SimpleButton title="Unternehmen" href="#" />
-            <SimpleMenu items={Company} title="Unternehmen" />
-            <SimpleButton title="Kontakt" primary={true} href="#" />
+          <div className='flex items-center md:ml-12 space-x-6'>
           </div>
         </div>
       </div>
