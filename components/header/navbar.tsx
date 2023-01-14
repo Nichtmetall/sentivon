@@ -8,6 +8,7 @@ import MegaMenu from '../dropdowns/megaMenu'
 import SimpleMenu from '../dropdowns/simpleMenu'
 import { Company, Services, Solutions } from '../data'
 import SlideOver from './slideOver'
+import { title } from 'process'
 
 export const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -37,7 +38,7 @@ export default function Navbar() {
 
   return (
     <Popover className={classNames(scrollPosition > 0 ? 'shadow-lg bg-white py-2' : 'shadow-none bg-none py-5', 'navbar-transition fixed w-full top-0 z-20 bg-opacity-50 backdrop-blur-md',)}>
-      <div className="mx-auto max-w-7xl flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+      <div className="mx-auto max-w-7xl flex justify-between items-center py-6">
         <div>
           <Link href="/" className="flex">
             <span className="sr-only">Sentivon</span>
@@ -55,9 +56,9 @@ export default function Navbar() {
 
           </Popover.Group>
           <div className="flex content-center items-center md:ml-12 space-x-5">
-            <SlideOver title="Service" items={Services} />
-            <SlideOver title="Lösungen" items={Solutions} />
-            <SlideOver title="Unternehmen" items={Company} />
+            <MegaMenu title="Service" items={Services} hasFooter={true} footeritems={[{title: "GitHub", href: "Helo"}, {title: "Test", href: "Helo"}]} />
+            <SimpleMenu title="Lösungen" items={Solutions} />
+            <SimpleMenu title="Unternehmen" items={Company} />
             <SimpleButton title="Kontakt" href="#" />
           </div>
           <div className='flex items-center md:ml-12 space-x-6'>

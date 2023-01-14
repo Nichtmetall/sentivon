@@ -1,13 +1,12 @@
 import { ComputerDesktopIcon, MagnifyingGlassIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { faCode, faStore, faComments, faBullhorn, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { faStore, faBullhorn, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 
 export const Services = [
-    { id: 0, title: 'Digital Consulting', description: 'Get a better', href: '#', icon: faComments, },
-    { id: 1, title: 'Suchmaschinenoptimierung', description: 'Get a better', href: '#', icon: faGoogle, },
-    { id: 3, title: 'Werbung', description: 'Get a better', href: '#', icon: faBullhorn, },
+    { id: 0, title: 'Suchmaschinenoptimierung', description: 'Get a better', href: '#', icon: faGoogle, },
+    { id: 1, title: 'Werbung', description: 'Get a better', href: '#', icon: faBullhorn, },
     { id: 2, title: 'Webentwicklung', description: 'Get a better', href: '#', icon: faLaptopCode, },
-    { id: 5, title: 'E-Commerce', description: 'Get a better', href: '#', icon: faStore, },
+    { id: 3, title: 'E-Commerce', description: 'Get a better', href: '#', icon: faStore, },
 ]
 
 export const Solutions = [

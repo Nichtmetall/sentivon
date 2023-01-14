@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Circular";
+    src: url(../assets/fonts/circular.ttf);
+  }
+
 html {
-    @apply scrollbar-hide;
+    @apply scrollbar-hide antialiased font-sans	;
     scroll-behavior: smooth;
 }
 
@@ -76,15 +81,23 @@ body {
 }
 
 button {
-    transition: background 200ms ease;
+    transition: background 300ms ease, color 300ms ease;
 }
 
 .button-layout {
-    @apply rounded-sm font-medium backdrop-blur-lg px-3 py-2;
+    @apply font-medium backdrop-blur-lg px-3 py-2;
 }
 
 .button-layout svg {
-    transition: transform 150ms ease-in-out;
+    transition: transform 150ms ease;
+}
+
+.button-cta {
+    @apply font-medium backdrop-blur-lg px-6 py-3;
+}
+
+.button-cta svg {
+    transition: transform 150ms ease;
 }
 
 @keyframes fadeInLeft {
@@ -102,4 +115,20 @@ button {
     visibility: visible;
     opacity: 100;
     transition: visibility 0s, opacity 200ms linear;
+}
+
+.icon-hover svg {
+    transition: transform 200ms ease;
+}
+
+.icon-hover:hover svg {
+    @apply translate-x-1;
+}
+
+.button-primary-outline {
+    @apply border border-primary-500 bg-primary-500 text-white hover:bg-white hover:text-primary-500;
+}
+
+.button-secondary {
+    @apply border border-transparent w-fit h-full flex hover:bg-gray-200 items-center gap-1 icon-hover;
 }

@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
@@ -22,14 +24,14 @@ export default function SimpleMenu(props: { title: any; items: any; }) {
                         <div onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
                             <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 pt-5 px-2 w-screen max-w-xs sm:px-0 shadow-lg">
                                 <div className="rounded-sm shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                    <div className="relative grid gap-6 bg-white p-8">
                                         {props.items.map((item: any) => (
-                                            <Link key={item.title} href={item.href} className="-m-3 p-3 flex showicon rounded-sm hover:translate-x-1 hover:bg-gray-100 transition">
+                                            <Link key={item.title} href={item.href} className="-m-3 p-3 flex showicon rounded-sm hover:translate-x-1 text-gray-500 hover:text-black  hover:bg-gray-100 transition">
                                                 <div className="w-full">
-                                                    <p className="text-base font-medium text-gray-900">{item.title}</p>
+                                                    <p className="text-base font-medium">{item.title}</p>
                                                 </div>
-                                                <div className="flex h-full items-center icontoshow pl-3">
-                                                    <ChevronRightIcon width={18} height={18} />
+                                                <div className="flex h-full items-center icontoshow">
+                                                    <FontAwesomeIcon className="h-3 w-3" icon={faArrowRight} />
                                                 </div>
                                             </Link>
                                         ))}

@@ -1,12 +1,13 @@
-import { Parallax } from "react-scroll-parallax";
 import MainLayout from "../components/layout/mainLayout";
-import Image from "next/image";
+import Hero from "../components/landingpage/hero";
 
 export default function Home() {
   return (
     <MainLayout>
       <div className="h-screen">
-
+        <div id="hero">
+          <Hero />
+        </div>
       </div>
     </MainLayout>
   )
