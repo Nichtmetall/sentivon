@@ -20,7 +20,7 @@ export default function SimpleMenu(props: { title: any; items: any; }) {
                         <span>{props.title}</span>
                         <ChevronDownIcon className={'ml-2 h-4 w-4'} aria-hidden="true" />
                     </Popover.Button>
-                    <Transition as={Fragment} enter="transition ease-out duration-300" enterFrom="opacity-0 translate-y-1" enterTo="opacity-100 translate-y-0" leave="transition ease-in duration-200" leaveFrom="opacity-100 translate-y-0" leaveTo="opacity-0 translate-y-1" show={isOpen}>
+                    <Transition as={Fragment} enter="transition ease duration-200" enterFrom="opacity-0 translate-y-1" enterTo="opacity-100 translate-y-0" leave="transition ease duration-100" leaveFrom="opacity-100 translate-y-0" leaveTo="opacity-0 translate-y-1" show={isOpen}>
                         <div onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
                             <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 pt-5 px-2 w-screen max-w-xs sm:px-0 shadow-lg">
                                 <div className="rounded-sm shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">

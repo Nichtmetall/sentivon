@@ -132,3 +132,8 @@ button {
 .button-secondary {
     @apply border border-transparent w-fit h-full flex hover:bg-gray-200 items-center gap-1 icon-hover;
 }
+
+.primary-card {
+    @apply bg-white backdrop-blur-md shadow-lg rounded-sm hover:-translate-y-1 px-5 py-8 w-full;
+    transition: all 200ms ease;
+}

@@ -56,7 +56,7 @@ export default function Navbar() {
 
           </Popover.Group>
           <div className="flex content-center items-center md:ml-12 space-x-5">
-            <MegaMenu title="Service" items={Services} hasFooter={true} footeritems={[{title: "GitHub", href: "Helo"}, {title: "Test", href: "Helo"}]} />
+            <MegaMenu title="Service" items={Services} hasFooter={true} footeritems={[{title: "Alle Services", href: "Helo"}, {title: "Test", href: "Helo"}]} />
             <SimpleMenu title="Lösungen" items={Solutions} />
             <SimpleMenu title="Unternehmen" items={Company} />
             <SimpleButton title="Kontakt" href="#" />

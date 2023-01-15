@@ -22,10 +22,10 @@ export default function MegaMenu(props: {
                         <span>{props.title}</span>
                         <ChevronDownIcon className={'ml-2 h-4 w-4'} aria-hidden="true" />
                     </Popover.Button>
-                    <Transition as={Fragment} enter="transition ease duration-500" enterFrom="opacity-0 translate-y-2" enterTo="opacity-100 translate-y-0" leave="transition ease duration-200" leaveFrom="opacity-100 translate-y-0" leaveTo="opacity-0 translate-y-1" show={isOpen}>
+                    <Transition as={Fragment} enter="transition ease duration-200" enterFrom="opacity-0 translate-y-1" enterTo="opacity-100 translate-y-0" leave="transition ease duration-100" leaveFrom="opacity-100 translate-y-0" leaveTo="opacity-0 translate-y-1" show={isOpen}>
                         <div onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
-                            <Popover.Panel className="absolute p-6 z-10 left-1/2 -translate-x-1/2 transform w-screen max-w-3xl">
-                                <div className="overflow-hidden rounded-sm shadow-lg">
+                            <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 pt-5 px-2 w-screen max-w-3xl sm:px-0 shadow-lg">
+                                <div className="rounded-sm shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                                     <div className={classNames(props.hasFooter ? 'rounded-t-md' : 'rounded-sm', "relative grid grid-cols-2 gap-6 bg-white p-8")}>
                                         {props.items.map((item: any) => (
                                             <Link key={item.title} href={item.href} className="-m-3 px-3 py-5 w-full hover:translate-x-1 hover:bg-gray-100 flex showicon rounded-sm text-gray-500 hover:text-black items-start transition">
